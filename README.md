@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Serviço em ReactJS consumindo API de CEP.
+Validação com checklist visual para usuário saber se já preencheu os requisitos mínimos.
 
 ## 🚀 Como executar
 
