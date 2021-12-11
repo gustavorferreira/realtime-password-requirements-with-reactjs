@@ -1,4 +1,4 @@
-<h1 align="center">Validação de senha com check list em tempo real</h1>
+<h1 align="center">Validação de senha com Checklist</h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
