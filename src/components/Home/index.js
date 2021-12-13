@@ -2,13 +2,13 @@ import { useState, useRef } from "react";
 import '../../styles/global.css';
 
 const isNumberRegx = /\d/;
-const letterUpperRegx = /[A-Z]/;
+const upperCaseLetterRegx = /[A-Z]/;
 const specialCharacterRegx = /[ !¹²³£¢¬ª~´°@#$%^&*()_+¨§º·`\-[\]/={};':"\\|,.<>?]/;
 
 export function Home() {
     const [password, setPassword] = useState("");
     const numeric = useRef(null);
-    const capsLock = useRef(null);
+    const upperCaseLetter = useRef(null);
     const specialCharacter = useRef(null);
     const minimumCharacter = useRef(null);
     const input = useRef(null);
@@ -24,12 +24,12 @@ export function Home() {
             numeric.current.style.color = ""
         }
 
-        if (letterUpperRegx.test(password)) {
-            capsLock.current.style.textDecoration = "line-through";
-            capsLock.current.style.color = "chartreuse"
+        if (upperCaseLetterRegx.test(password)) {
+            upperCaseLetter.current.style.textDecoration = "line-through";
+            upperCaseLetter.current.style.color = "chartreuse"
         } else {
-            capsLock.current.style.textDecoration = "";
-            capsLock.current.style.color = ""
+            upperCaseLetter.current.style.textDecoration = "";
+            upperCaseLetter.current.style.color = ""
         }
 
         if (specialCharacterRegx.test(password)) {
@@ -48,7 +48,7 @@ export function Home() {
             minimumCharacter.current.style.color = ""
         }
 
-        if (isNumberRegx.test(password) && letterUpperRegx.test(password) && specialCharacterRegx.test(password) && password.length >= 8) {
+        if (isNumberRegx.test(password) && upperCaseLetterRegx.test(password) && specialCharacterRegx.test(password) && password.length >= 8) {
             input.current.style.border = "1px solid chartreuse"
         } else {
             input.current.style.border = ""
@@ -59,7 +59,7 @@ export function Home() {
         <div className='wrapper'>
             <div>
                 <p ref={numeric}>Número</p>
-                <p ref={capsLock}>Letra maiúscula</p>
+                <p ref={upperCaseLetter}>Letra maiúscula</p>
                 <p ref={specialCharacter}>Caractere especial</p>
                 <p ref={minimumCharacter}>Mínimo de 8 caracteres</p>
             </div>
