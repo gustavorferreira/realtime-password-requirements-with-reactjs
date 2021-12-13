@@ -1,9 +1,9 @@
-import '../../styles/global.css';
 import { useState } from "react";
+import '../../styles/global.css';
 
 const isNumberRegx = /\d/;
 const letterUpperRegx = /[A-Z]/;
-const specialCharacterRegx = /[ !@#$%^&*()_+¨§º·`\-={};':"\\|,.<>?]/; //[]/
+const specialCharacterRegx = /[ !¹²³£¢¬ª~´°@#$%^&*()_+¨§º·`\-[\]/={};':"\\|,.<>?]/; //[]/
 
 export function Home() {
     const [password, setPassword] = useState("");
